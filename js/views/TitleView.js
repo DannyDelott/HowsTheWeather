@@ -9,11 +9,9 @@ var TitleView = Backbone.View.extend({
   },
 
   render: function() {
-
     this.$el.html(this.template({
       pageTitle: 'How\'s the weather?'
     }));
-
   }
 
 });
