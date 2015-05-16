@@ -10,7 +10,7 @@ var Weathers = Backbone.Collection.extend({
         this.add(new Weather({
           zipcode: zipcode,
           city: data.name,
-          weather: data.main.temp + ' °F'
+          weather: data.main.temp + '°F'
         }));
       }.bind(this)
     );
