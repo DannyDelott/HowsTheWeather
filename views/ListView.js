@@ -1,4 +1,4 @@
-var EntriesView = Backbone.View.extend({
+var ListView = Backbone.View.extend({
   id: 'cities-container',
 
   initialize: function() {
