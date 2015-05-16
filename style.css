@@ -1,0 +1,103 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*END RESET */
+
+#container {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: tomato;
+  border-radius: 16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#page-title {
+  font-size:36pt;
+  font-family: 'Helvetica', serif;
+  color: white;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#input-container {
+  width: 80%;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#user-input {
+  text-align: center;
+  line-height: 55px;
+  font-family: 'Helvetica', serif;
+  font-size: 32pt;
+}
+
+#cities-container {
+  width: 80%;
+  height: auto;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  top:50%;
+}
+
+.city {
+  color: white;
+  font-family: 'Helvetica', serif;
+  padding-bottom:16px;
+  font-size:16pt;
+}
