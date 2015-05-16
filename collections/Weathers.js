@@ -23,7 +23,7 @@ var Weathers = Backbone.Collection.extend({
       'http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&units=imperial',
       function(data) {
         callback(data);
-      }.bind(this)
+      }
     );
   }
 
