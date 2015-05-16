@@ -1,20 +1,28 @@
 var ListView = Backbone.View.extend({
-  id: 'cities-container',
+
+  id: 'list',
 
   initialize: function() {
     this.render();
-    this.collection.on('add', this.makeNewEntry, this);
+    this.collection.on('add', this.refreshList, this);
   },
 
   render: function() {
-
-    // add this view to the container element
-    $('#container').append(this.el);
+    $('#content').append(this.el);
   },
 
-  makeNewEntry: function() {
+  refreshList: function() {
 
-    console.log('make a new view');
+    this.$el.empty();
+
+    var entries = this.collection.models.map(function(model) {
+      return new EntryView({
+        model: model
+      });
+    });
+
+    this.$el.append(entries);
 
   }
+
 });
