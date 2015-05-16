@@ -29,7 +29,7 @@ var InputView = Backbone.View.extend({
 
     // add zip code
     else if(isEnterKey) {
-      this.collection.addWeather(this.$el.val());
+      this.collection.addWeatherEntry(this.$el.val());
       this.resetInput();
     }
 

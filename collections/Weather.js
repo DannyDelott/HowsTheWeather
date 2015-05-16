@@ -2,12 +2,12 @@ var Weather = Backbone.Collection.extend({
 
   model: WeatherEntry,
 
-  addWeather: function(zipcode) {
+  addWeatherEntry: function(zipcode) {
 
     this.getData(
       zipcode,
       function(data) {
-        this.add(new Weather({
+        this.add(new WeatherEntry({
           zipcode: zipcode,
           city: data.name,
           weather: data.main.temp + '°F'
