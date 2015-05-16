@@ -1,5 +1,5 @@
 // Collection
-var weather = new Weathers();
+var weather = new Weather();
 
 // Views
 var app = new AppView();

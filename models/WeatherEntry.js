@@ -1,4 +1,4 @@
-var Weather = Backbone.Model.extend({
+var WeatherEntry = Backbone.Model.extend({
 
   defaults: {
     zipcode: '',

@@ -1,6 +1,6 @@
-var Weathers = Backbone.Collection.extend({
+var Weather = Backbone.Collection.extend({
 
-  model: Weather,
+  model: WeatherEntry,
 
   addWeather: function(zipcode) {
 
