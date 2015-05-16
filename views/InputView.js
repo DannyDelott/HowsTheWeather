@@ -1,8 +1,6 @@
 var InputView = Backbone.View.extend({
 
-  id: 'input-container',
-
-  template: _.template('<input id="user-input" placeholder="<%= text %>">'),
+  el: '<input>',
 
   events: {
     'keydown': 'keyAction',
@@ -13,31 +11,39 @@ var InputView = Backbone.View.extend({
   },
 
   render: function() {
-
-    // render the template inside the parent DOM element
-    this.$el.html(this.template({
-      text: 'What\'s your zip code?'
-    }));
-
-    // add this view to the container element
-    $('#container').append(this.el);
+    this.resetInput();
+    $('#content').append(this.el);
   },
 
   keyAction: function(e) {
 
-    // Enter key, and input field isn't empty
-    if(e.which !== 13 || $('#user-input').val().trim().length === 0) {
-      return;
-    }
+    var isEnterKey = (e.which === 13);
 
     // validate input
-    if(!$('#user-input').val().trim().match(/^(?=.*[1-9].*)[0-9]{1,5}$/)) {
-      console.log('bad input');
-      return;
+    if(isEnterKey && !this.$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{1,5}$/)) {
+      this.$el.attr({
+        placeholder: 'Sorry, zip code invalid.'
+      });
+      this.clearInput();
     }
 
-    // update collection with a new model
-    this.collection.addWeather($('#user-input').val());
+    // add zip code
+    else if(isEnterKey) {
+      this.collection.addWeather(this.$el.val());
+      this.resetInput();
+    }
 
+  },
+
+  resetInput: function() {
+    this.$el.attr({
+      placeholder: 'Enter your zip code'
+    });
+    this.clearInput();
+  },
+
+  clearInput: function() {
+    this.$el.val('');
   }
+
 });
