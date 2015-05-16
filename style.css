@@ -63,10 +63,10 @@ table {
   width: 80%;
   height: 90%;
   position: absolute;
-  margin:auto;
-  left:0;
-  right:0;
-  padding-top:75px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 75px;
 }
 
 h1 {
@@ -74,7 +74,7 @@ h1 {
   font-family: 'Helvetica', serif;
   color: tomato;
   text-align: center;
-  padding-bottom:36px;
+  padding-bottom: 36px;
 }
 
 input {
