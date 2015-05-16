@@ -1,8 +1,8 @@
 var TitleView = Backbone.View.extend({
 
-  el: '#container',
+  el: '#content',
 
-  template: _.template('<h1 id="page-title"><%= pageTitle %></h1>'),
+  template: _.template('<h1><%= pageTitle %></h1>'),
 
   initialize: function() {
     this.render();
@@ -14,7 +14,6 @@ var TitleView = Backbone.View.extend({
       pageTitle: 'How\'s the weather?'
     }));
 
-    return this;
   }
 
 });
