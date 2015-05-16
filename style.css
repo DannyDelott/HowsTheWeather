@@ -49,55 +49,54 @@ table {
 
 #container {
   width: 600px;
-  height: 300px;
+  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   background-color: tomato;
-  border-radius: 16px;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-#page-title {
-  font-size:36pt;
-  font-family: 'Helvetica', serif;
-  color: white;
-  text-align: center;
-  padding-top: 35px;
-}
-
-#input-container {
+#content {
   width: 80%;
-  height: 55px;
+  height: 100%;
   position: absolute;
-  top: 0;
+  top: 50%;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-#user-input {
+h1 {
+  font-size: 36pt;
+  font-family: 'Helvetica', serif;
+  color: white;
+  text-align: center;
+  padding-bottom:36px;
+}
+
+input {
   text-align: center;
   line-height: 55px;
   font-family: 'Helvetica', serif;
   font-size: 32pt;
 }
 
-#cities-container {
+#list {
   width: 80%;
   height: auto;
   position: relative;
   margin: auto;
   text-align: center;
-  top:50%;
+  top: 5%;
 }
 
-.city {
+.entry {
   color: white;
   font-family: 'Helvetica', serif;
-  padding-bottom:16px;
-  font-size:16pt;
+  padding-bottom: 16px;
+  font-size: 16pt;
 }
