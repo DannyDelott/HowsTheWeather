@@ -9,11 +9,11 @@ var EntryView = Backbone.View.extend({
   },
 
   render: function() {
-
-    this.$el.append(this.template({
+    var entry = this.template({
       weather: this.model.get('weather'),
       city: this.model.get('city')
-    }));
+    });
 
+    this.$el.append(entry);
   }
 });
