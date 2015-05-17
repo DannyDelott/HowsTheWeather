@@ -37,7 +37,7 @@ var InputView = Backbone.View.extend({
 
   resetInput: function() {
     this.$el.attr({
-      placeholder: 'Enter your zip code'
+      placeholder: 'Enter a zip code'
     });
     this.clearInput();
   },
