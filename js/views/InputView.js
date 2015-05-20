@@ -1,6 +1,7 @@
 var InputView = Backbone.View.extend({
 
   tagName: 'input',
+  // el: '<input>',
 
   events: {
     'keydown': 'keyAction',
