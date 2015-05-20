@@ -1,14 +1,13 @@
 var AppView = Backbone.View.extend({
 
-  id: 'container',
+  el: 'body',
 
   initialize: function() {
     this.render();
   },
 
   render: function() {
-    this.$el.html('<div id="content"></div>');
-    $('body').append(this.el);
+    this.$el.html('<div id="container"><div id="content"></div></div>');
   }
 
 });
