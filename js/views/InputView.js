@@ -13,25 +13,25 @@ var InputView = Backbone.View.extend({
 
   render: function() {
     this.resetInput();
-    $('#content').append(this.el);
+    return this;
   },
 
   keyAction: function(e) {
 
     var isEnterKey = (e.which === 13);
 
-    // validate input
-    if(isEnterKey && !this.$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{1,5}$/)) {
+    if(isEnterKey && !this.$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{5}$/)) {
+
       this.$el.attr({
         placeholder: 'Sorry, zip code invalid.'
       });
       this.clearInput();
-    }
 
-    // add zip code
-    else if(isEnterKey) {
+    } else if(isEnterKey) {
+
       this.collection.addWeatherEntry(this.$el.val());
       this.resetInput();
+
     }
 
   },
