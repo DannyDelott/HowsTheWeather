@@ -1,19 +1,22 @@
 var EntryView = Backbone.View.extend({
 
-  el: '#list',
+  className: 'entry',
 
-  template: _.template('<div class="entry">It is currently <%= weather %> in <%= city %>.</div>'),
+  template: _.template('<p>It is currently <%= weather %> in <%= city %>.</p>'),
 
   initialize: function() {
     this.render();
   },
 
   render: function() {
+
     var entry = this.template({
       weather: this.model.get('weather'),
       city: this.model.get('city')
     });
 
-    this.$el.append(entry);
+    this.$el.html(entry);
+
+    return this;
   }
 });
