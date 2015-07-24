@@ -7,13 +7,11 @@ var Weather = Backbone.Collection.extend({
     $.get(
       'http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&units=imperial',
       function(data) {
-        this.add(
-          {
+        this.add({         
             zipcode: zipcode,
             city: data.name,
             weather: data.main.temp + '°F'
-          })
-        );
+          });
       }.bind(this)
     );
   }
