@@ -11,7 +11,7 @@ var WeatherEntry = Backbone.Model.extend({
 
   toggleUnit: function() {
 
-    var isImperial = this.get('unit') === '°F' ? true : false;
+    var isImperial = this.get('unit') === '°F';
 
     if (isImperial) {
       var celsius = (this.get('weather') - 32) * (5 / 9);
