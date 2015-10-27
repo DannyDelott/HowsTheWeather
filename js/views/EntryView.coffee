@@ -7,8 +7,9 @@ class window.EntryView extends Backbone.View
   events: 'click' : 'clickAction'
 
   initialize: ->
-    @listenTo @model, 'change', @render
     @render()
+    @model.on 'change add', =>
+      @render()
 
   render: ->
 

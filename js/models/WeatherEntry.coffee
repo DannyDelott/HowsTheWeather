@@ -8,6 +8,8 @@ class window.WeatherEntry extends Backbone.Model
 
   initialize: ->
 
+    console.log "creating a model"
+
   toggleUnit: ->
 
     isImperial = @get('unit') is '°F'

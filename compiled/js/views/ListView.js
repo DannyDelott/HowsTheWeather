@@ -13,19 +13,27 @@
     ListView.prototype.id = 'list';
 
     ListView.prototype.initialize = function() {
-      return this.listenTo(this.collection, 'add', this.render());
+      this.collection.on('add', (function(_this) {
+        return function() {
+          return _this.render();
+        };
+      })(this));
+      return this.render();
     };
 
     ListView.prototype.render = function() {
       var $els;
       this.$el.empty();
-      this.entries = this.collection.models.map(function(model) {
-        console.log("model is:" + model);
-        return new EntryView({
-          model: model
-        });
-      });
+      console.log("trying to render the list");
+      this.entries = this.collection.models.map((function(_this) {
+        return function(model) {
+          return new EntryView({
+            model: model
+          });
+        };
+      })(this));
       $els = this.entries.map(function(entry) {
+        console.log(entry);
         return entry.$el;
       });
       this.$el.append($els);

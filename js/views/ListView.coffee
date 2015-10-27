@@ -3,16 +3,21 @@ class window.ListView extends Backbone.View
   id: 'list'
 
   initialize: ->
-    @listenTo @collection, 'add', @render()
+    @collection.on 'add', => 
+      @render()
+    @render()
 
   render: ->
     @$el.empty()
 
-    @entries = @collection.models.map (model) ->
-      console.log "model is:" + model
+    console.log "trying to render the list"
+
+    @entries = @collection.models.map (model) =>
+      # console.log model
       new EntryView({model: model})
 
     $els = @entries.map (entry) ->
+      console.log entry
       entry.$el
 
     @$el.append $els

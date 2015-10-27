@@ -17,7 +17,9 @@
       unit: '°F'
     };
 
-    WeatherEntry.prototype.initialize = function() {};
+    WeatherEntry.prototype.initialize = function() {
+      return console.log("creating a model");
+    };
 
     WeatherEntry.prototype.toggleUnit = function() {
       var celsius, fahrenheit, isImperial;

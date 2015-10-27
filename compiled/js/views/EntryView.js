@@ -19,8 +19,12 @@
     };
 
     EntryView.prototype.initialize = function() {
-      this.listenTo(this.model, 'change', this.render);
-      return this.render();
+      this.render();
+      return this.model.on('change add', (function(_this) {
+        return function() {
+          return _this.render();
+        };
+      })(this));
     };
 
     EntryView.prototype.render = function() {
