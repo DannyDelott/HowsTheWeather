@@ -27,10 +27,8 @@
 
     InputView.prototype.keyAction = function(e) {
       var isEnterKey;
-      console.log(e.which);
       isEnterKey = e.which === 13;
       if (isEnterKey && !this.$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{5}$/)) {
-        console.log('invalid');
         this.$el.attr({
           "placeholder": "Sorry, zip code invalid."
         });
@@ -51,7 +49,8 @@
     };
 
     InputView.prototype.clearInput = function() {
-      return this.$el.val();
+      console.log("trying to clear");
+      return this.$el.val('');
     };
 
     return InputView;

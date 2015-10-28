@@ -33,7 +33,6 @@
         };
       })(this));
       $els = this.entries.map(function(entry) {
-        console.log(entry);
         return entry.$el;
       });
       this.$el.append($els);

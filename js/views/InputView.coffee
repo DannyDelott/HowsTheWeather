@@ -15,14 +15,12 @@ class window.InputView extends Backbone.View
 
     isEnterKey = (e.which is 13)
 
-    # if (isEnterKey and !@$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{5}$/))
-    #   console.log 'invalid'
-    #   @$el.attr "placeholder":"Sorry, zip code invalid."
-    #   @clearInput()
-    #   @
+    if (isEnterKey and !@$el.val().trim().match(/^(?=.*[0-9].*)[0-9]{5}$/))
+      @$el.attr "placeholder":"Sorry, zip code invalid."
+      @clearInput()
+      @
 
-    # else if (isEnterKey)
-      if (isEnterKey)
+    else if (isEnterKey)
       @collection.addWeatherEntry @$el.val()
       @resetInput()
       @
@@ -32,4 +30,5 @@ class window.InputView extends Backbone.View
     @clearInput()
 
   clearInput: ->
-    @$el.val()
+    console.log "trying to clear"
+    @$el.val('')
